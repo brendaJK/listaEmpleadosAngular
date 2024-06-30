@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Lista de los empleados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Número de Usuario</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{empleado.id}}</td>
+          <td>{{empleado.nombre}}</td>
+          <td>{{empleado.correo}}</td>
+          <td>{{empleado.telefono}}</td>
+          <td>{{empleado.fechaNacimiento}}</td>
+          <td>
+            <button class="delete-btn" (click)="borrar(empleado.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

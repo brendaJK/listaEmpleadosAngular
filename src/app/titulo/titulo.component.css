@@ -1,0 +1,12 @@
+.titulo {
+    text-align: center;
+    color: purple;
+}
+.titulo-contenido{
+    text-align: center;
+}
+.titulo-contenido h1{
+    font-size: 40px;
+    color: white;
+    font-weight: 300px;
+}

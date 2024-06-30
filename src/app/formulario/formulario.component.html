@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="iconos" (click)="toggleFormulario()">
+        <span>Desplegar ^</span>
+    </div>
+    <form id="registro-form" (submit)="agregar()" *ngIf="mostrarFormulario">
+        <h2>Formulario de Registro</h2>
+        <input type="hidden" name="id" [(ngModel)]="nuevoEmpleado.id" required>
+        
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevoEmpleado.nombre" required>
+        
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo" [(ngModel)]="nuevoEmpleado.correo" required>
+        
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" [(ngModel)]="nuevoEmpleado.telefono" required>
+        
+        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" [(ngModel)]="nuevoEmpleado.fechaNacimiento" required>
+        
+        <label>Sexo</label>
+        <div class="sexo">
+            <div class="input" style="display: flex; align-items: flex-start;">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino" [(ngModel)]="nuevoEmpleado.sexo" required>
+            </div>
+            <div class="input" style="display: flex; align-items: flex-start;">
+                <label for="femenino">Femenino</label>
+                <input type="radio" id="femenino" name="sexo" value="femenino" [(ngModel)]="nuevoEmpleado.sexo" required>
+            </div>
+        </div>
+        
+        <button type="submit">Agregar</button>
+    </form>
+</div>
